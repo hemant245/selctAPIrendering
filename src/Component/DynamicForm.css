@@ -1,0 +1,244 @@
+/* new css */
+.form-required {
+  color: red;
+  padding: 2px 6px 2px;
+}
+.form-section {
+  width: 100%;
+  margin-top: 10px;
+}
+.form-section div {
+  /* border: 1.5px solid black; */
+  margin: 5px 10px;
+  padding: 1% 1% 1.8% 1.4%;
+}
+
+.form-section input {
+  height: auto;
+  border-radius: none;
+  margin: 0;
+  padding: 0;
+  /* border-color: #dadfe5; */
+  padding: 0.1rem 0.75rem;
+  width: 160px;
+}
+
+.form-section .formDate {
+  display: inline-block;
+  color: #495057;
+  outline: none;
+  padding: 0.07rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  margin-left: 1rem;
+}
+
+.form-section .formDate:focus:valid {
+  border-color: #34c38f;
+  box-shadow: 0 0 0 0.08rem rgba(52, 195, 143, 0.25);
+}
+.form-section .formDate:focus:invalid {
+  border-color: #f46a6a;
+  box-shadow: 0 0 0 0.08rem rgba(244, 106, 106, 0.25);
+}
+
+.form-section label {
+  display: block;
+  text-align: start;
+  margin: 5px auto 5px 12px;
+  font-size: 1rem;
+  color: #182433;
+  font-weight: 500;
+
+  /* border: 1px solid red; */
+}
+.radio-group {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+}
+.grid {
+  display: grid;
+  /* border: 1px solid #dadfe5;
+    border-radius: 0.5rem; */
+}
+.grid-col-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+.grid-col-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+.grid-col-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.grid-col-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+.grid-col-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.pl-3 {
+  padding-left: 3rem;
+}
+p {
+  padding: 2rem;
+}
+button {
+  border-radius: 0;
+}
+
+h3 {
+  text-align: left;
+  margin: 2px;
+  border-bottom: 1px solid #969494;
+  color: dimgray;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+/* button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      background-color: #adb5bd;
+      -webkit-appearance: button;
+    } */
+.customInput {
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  outline: none;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #495057;
+  width: 160px;
+  margin: 0%;
+  margin-left: 1rem;
+}
+
+.mainborderform {
+  border: 1px solid #dadfe5;
+  border-radius: 0.5rem;
+}
+
+.customInput:focus:valid {
+  border-color: #34c38f;
+  box-shadow: 0 0 0 0.08rem rgba(52, 195, 143, 0.25);
+}
+.customInput:focus:invalid {
+  border-color: #f46a6a;
+  box-shadow: 0 0 0 0.08rem rgba(244, 106, 106, 0.25);
+}
+
+.inputError {
+  display: inline-block;
+  outline: none;
+  border: 1px solid #b9babb;
+  border-radius: 5px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  /* width: 200px; */
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  color: #ffffff;
+  background-color: #556ee6;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #2a4aed;
+}
+
+.padding {
+  padding: 1.5rem;
+  margin: 0.5rem;
+}
+
+.periodmain {
+  padding: 0.1rem 0.75rem;
+  border: 1px solid #ced4da;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #495057;
+  border-radius: 0.25rem;
+  outline: none;
+  width: 50px;
+}
+
+.periodmain:focus:valid {
+  border-color: #34c38f;
+  box-shadow: 0 0 0 0.08rem rgba(52, 195, 143, 0.25);
+}
+
+.periodselect {
+  padding: 0.1rem 0.75rem;
+  border: 1px solid #ced4da;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #495057;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.periodselect:focus:valid {
+  border-color: #34c38f;
+  box-shadow: 0 0 0 0.08rem rgba(52, 195, 143, 0.25);
+}
+
+input,
+[type="file"] {
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+}

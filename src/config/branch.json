@@ -1,0 +1,287 @@
+[
+  {
+    "type": "form",
+    "title": "Branch Details",
+    "server_key": "addBranch",
+    "isEditable": false,
+    "server_value": "",
+    "css_class": "",
+    "fields": [
+      {
+        "type": "form",
+        "title": "Branch Information",
+        "formId": 1234,
+        "server_key": "branchInformation",
+        "isEditable": true,
+        "server_value": "",
+        "css_class": "grid grid-col-5",
+        "endpoint": "offices",
+        "fields": [
+          {
+            "name": "externalId",
+            "type": "text",
+            "label": "Branch Code",
+            "css_class": "",
+            "server_key": "externalId",
+            "list_display": true,
+            "list_filter": true,
+            "isEditable": false,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "min_length": 5,
+              "max_length": 100,
+              "pattern": "[A-Z]{d+$}",
+              "error_message": "Please enter valid Braanch Code"
+            }
+          },
+          {
+            "name": "branchAddress",
+            "type": "text",
+            "label": "Branch Address",
+            "css_class": "",
+            "server_key": "branchAddress",
+            "list_display": false,
+            "list_filter": false,
+            "isEditable": true,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "error_message": "Please Enter Branch Address"
+            }
+          },
+          {
+            "name": "parent",
+            "type": "select",
+            "label": "Parent Office Name",
+            "css_class": "",
+            "server_key": "parent",
+            "list_display": false,
+            "list_filter": false,
+            "isEditable": false,
+            "options_url": "offices",
+            "server_value": "",
+            "validation": {
+              "required": false,
+              "error_message": "Please Enter Company Name"
+            }
+          },
+          {
+            "name": "name",
+            "type": "text",
+            "label": "Branch Name",
+            "css_class": "",
+            "server_key": "name",
+            "list_display": true,
+            "list_filter": true,
+            "isEditable": true,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "error_message": "Please Enter Branch Name"
+            }
+          },
+          {
+            "name": "branchMobileNumber",
+            "type": "tel",
+            "css_class": "",
+            "label": "Mobile No.",
+            "server_key": "branchMobileNumber",
+            "list_display": false,
+            "list_filter": false,
+            "isEditable": false,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "min_length": 10,
+              "max_length": 9999999999,
+              "error_message": "Please enter valid Mobile Number"
+            }
+          },
+          {
+            "name": "phoneNumber",
+            "type": "tel",
+            "css_class": "",
+            "label": "Phone No.",
+            "server_key": "phoneNumber",
+            "list_display": false,
+            "list_filter": false,
+            "isEditable": false,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "min_length": 10,
+              "max_length": 9999999999,
+              "error_message": "Please enter valid Phone Number"
+            }
+          },
+          {
+            "name": "mobileNumber",
+            "type": "tel",
+            "css_class": "",
+            "label": "Mobile No. 1",
+            "server_key": "mobileNumber",
+            "list_display": false,
+            "list_filter": false,
+            "isEditable": false,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "min_length": 10,
+              "max_length": 9999999999,
+              "error_message": "Please enter valid Mobile Number"
+            }
+          },
+          {
+            "name": "managerName",
+            "type": "text",
+            "label": "Manager Name",
+            "css_class": "",
+            "server_key": "managerName",
+            "list_display": true,
+            "list_filter": true,
+            "isEditable": false,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "min_length": 2,
+              "max_length": 50,
+              "pattern": "^[a-zA-Z\\s]+$",
+              "error_message": "Please enter valid Manager Name"
+            }
+          },
+          {
+            "name": "countryToOffice",
+            "type": "select",
+            "label": "Country",
+            "css_class": "",
+            "server_key": "countryToOffice",
+            "list_display": false,
+            "list_filter": false,
+            "options_url": "countries",
+            "isEditable": false,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "min_length": 5,
+              "max_length": 200,
+              "pattern": "[A-Z]{d+$}",
+              "error_message": "Please enter valid country"
+            }
+          },
+          {
+            "name": "stateToOffice",
+            "type": "select",
+            "label": "State",
+            "css_class": "",
+            "server_key": "stateToOffice",
+            "list_display": false,
+            "list_filter": false,
+            "isEditable": false,
+            "server_value": "",
+            "dependency": {
+              "parent": "countryToOffice",
+              "url_template": "states/country-states"
+            },
+            "validation": {
+              "required": true,
+              "min_length": 5,
+              "max_length": 200,
+              "pattern": "[A-Z]{d+$}",
+              "error_message": "Please enter valid State"
+            }
+          },
+          {
+            "name": "districtToOffice",
+            "type": "select",
+            "label": "District",
+            "css_class": "",
+            "server_key": "districtToOffice",
+            "list_display": false,
+            "list_filter": false,
+            "server_value": "",
+            "dependency": {
+              "parent": "stateToOffice",
+              "url_template": "districts/state-districts"
+            },
+            "validation": {
+              "required": true,
+              "min_length": 5,
+              "max_length": 200,
+              "pattern": "^[A-Z]{d+$}",
+              "error_message": "Please enter valid Address"
+            }
+          },
+          {
+            "name": "talukaToOffice",
+            "type": "select",
+            "label": "Taluka",
+            "css_class": "",
+            "server_key": "talukaToOffice",
+            "list_display": false,
+            "list_filter": false,
+            "server_value": "",
+            "dependency": {
+              "parent": "district",
+              "url_template": "talukas/district-talukas"
+            },
+            "validation": {
+              "required": true,
+              "min_length": 5,
+              "max_length": 200,
+              "pattern": "^[A-Z]{d+$}",
+              "error_message": "Please enter valid Taluka"
+            }
+          },
+          {
+            "name": "city",
+            "type": "text",
+            "label": "City",
+            "css_class": "",
+            "server_key": "city",
+            "list_display": true,
+            "list_filter": true,
+            "isEditable": false,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "min_length": 5,
+              "max_length": 200,
+              "pattern": "[A-Z]{d+$}",
+              "error_message": "Please enter valid Address"
+            }
+          },
+          {
+            "name": "openingDate",
+            "type": "date",
+            "css_class": "",
+            "label": "Date of Opening",
+            "server_key": "openingDate",
+            "list_display": false,
+            "list_filter": false,
+            "isEditable": true,
+            "server_value": "",
+            "validation": {
+              "required": true,
+              "max_date": "2099-01-01",
+              "min_date": "1900-01-01",
+              "error_message": "Please select valid Date"
+            }
+          },
+          {
+            "name": "Save",
+            "type": "submit",
+            "css_class": "",
+            "label": "Save",
+            "server_key": "",
+            "isEditable": false,
+            "server_value": "",
+            "validation": {
+              "required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
